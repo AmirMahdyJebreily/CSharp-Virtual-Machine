@@ -529,4 +529,5 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-Virtual Machine/Virtual Machine/Interface
+Virtual Machine/Virtual Machine/Interface/
+Virtual Machine/Virtual Machine/Interface/index.html
