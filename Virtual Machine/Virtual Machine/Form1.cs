@@ -92,6 +92,7 @@ namespace Virtual_Machine
         }
         private void webView_NavigationStarting(object sender, Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs e)
         {
+#if !DEBUG
             webView.CoreWebView2.DefaultDownloadDialogCornerAlignment = CoreWebView2DefaultDownloadDialogCornerAlignment.BottomRight;
             webView.CoreWebView2.Settings.IsPasswordAutosaveEnabled = false;
             webView.CoreWebView2.Settings.IsSwipeNavigationEnabled = false;
@@ -103,6 +104,7 @@ namespace Virtual_Machine
             webView.CoreWebView2.Settings.IsZoomControlEnabled = false;
             webView.CoreWebView2.Settings.IsPinchZoomEnabled = false;
             webView.CoreWebView2.Settings.HiddenPdfToolbarItems = Microsoft.Web.WebView2.Core.CoreWebView2PdfToolbarItems.None;
+#endif
         }
         #endregion
 
