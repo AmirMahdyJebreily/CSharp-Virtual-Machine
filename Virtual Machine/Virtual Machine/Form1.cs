@@ -61,7 +61,6 @@ namespace Virtual_Machine
             {
                 try
                 {
-
                     webView.CoreWebView2.SetVirtualHostNameToFolderMapping(domainForInterface, $"{Application.StartupPath}{interfaceIndex}", CoreWebView2HostResourceAccessKind.Allow);
                 }
                 catch { }
