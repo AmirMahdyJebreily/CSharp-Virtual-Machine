@@ -1,5 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <PropertyGroup Label="Globals">
+    <WV2WinRTVerbosity>normal</WV2WinRTVerbosity>
+  </PropertyGroup>
+
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
@@ -14,12 +18,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Interface\index.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <None Update="Interface\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Interface\style.css">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Interface\assets\" />
   </ItemGroup>
 
 </Project>
